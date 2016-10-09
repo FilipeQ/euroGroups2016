@@ -34,6 +34,13 @@
         };
     });
 
+    app.directive("searchFilters", function(){
+        return {
+            restrict: 'E',
+            templateUrl:'views/search-filters.html'
+        };
+    });
+
     app.filter('customFilterGroups', function() {
         return function(object, search) {
 

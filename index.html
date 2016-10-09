@@ -22,13 +22,9 @@
     <div class="main-container" ng-controller="GroupsController">
         <h2>{{title}}</h2>
 
-        <div>
-            <label>Search group by name:
-                <select class="form-control" ng-model="groupName" ng-options="table[0].group for table in tables" >
-                    <option value="">All</option>
-                </select>
-            </label>
-        </div>
+
+        <search-filters></search-filters>
+
 
         <!--  table container  -->
         <group-description class="table-container" ng-repeat="table in tables | customFilterGroups:groupName"></group-description>
