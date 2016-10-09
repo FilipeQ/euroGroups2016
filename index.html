@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="groupsStore">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/groups.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</head>
+<body >
+
+    <menu-navegacao></menu-navegacao>
+
+    <!--  groups container  -->
+    <div class="main-container" ng-controller="GroupsController">
+        <h2>{{title}}</h2>
+
+        <div>
+            <label>Search group by name:
+                <select class="form-control" ng-model="groupName" ng-options="table[0].group for table in tables" >
+                    <option value="">All</option>
+                </select>
+            </label>
+        </div>
+
+        <!--  table container  -->
+        <group-description class="table-container" ng-repeat="table in tables | customFilterGroups:groupName"></group-description>
+
+    </div>
+
+</body>
+</html>

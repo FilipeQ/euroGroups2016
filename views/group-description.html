@@ -1,0 +1,29 @@
+<h3>
+    Group {{table[0].group}}
+</h3>
+<div class="table-responsive">
+    <table class="table table-striped" >
+        <thead>
+        <tr>
+            <th title="Position">P</th>
+            <th title="Team Name">Team</th>
+            <th title="Games Played">GP</th>
+            <th title="Goals for" class="hide-mobile">F</th>
+            <th title="Goals against" class="hide-mobile">A</th>
+            <th title="Goal difference" class="hide-mobile">GD</th>
+            <th title="Points">Pts</th>
+        </tr>
+        </thead>
+        <tbody >
+        <tr ng-repeat="teamInfo in table">
+            <td class="col-md-1">{{teamInfo.rank}}</td>
+            <td class="col-md-4"><img class="logo-teams" src="{{teamInfo.crestURI}}"/> {{teamInfo.team}}</td>
+            <td class="col-md-1">{{teamInfo.playedGames}}</td>
+            <td class="col-md-1 hide-mobile">{{teamInfo.goals}}</td>
+            <td class="col-md-1 hide-mobile">{{teamInfo.goalsAgainst}}</td>
+            <td class="col-md-1 hide-mobile">{{teamInfo.goalDifference}}</td>
+            <td class="col-md-1">{{teamInfo.points}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>

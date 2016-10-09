@@ -1,0 +1,45 @@
+body{
+    background: url(http://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/4/2014/02/Football-Ground-Wallpapers-1.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+h1, h2, h3{
+    text-align: center;
+    color: #fdfdf5;
+}
+
+label{
+    color: #fdfdf5;
+}
+
+.table{
+    margin-bottom:0;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: white;
+}
+
+.navbar-toggle{
+    margin-left: 15px;
+    margin-right: 0;
+    float: left;
+}
+
+.navbar-inverse .navbar-collapse{
+    max-width: 700px;
+    margin: auto;
+}
+
+@media screen and (max-width: 680px) {
+    .hide-mobile{
+        display: none !important;
+    }
+}

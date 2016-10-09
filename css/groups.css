@@ -1,0 +1,39 @@
+.logo-teams{
+    height: 22px;
+    width: 22px;
+    margin-right: 5px;
+}
+
+.table-responsive{
+    max-width: 620px;
+    min-width: 620px;
+    background-color: #dce2f5;
+    margin-bottom: 10px;
+    border-radius: 2px;
+}
+
+.table-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.table-container h3{
+    align-self: baseline;
+    border-radius: 25%;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.36);
+    box-shadow: 0 3px 6px rgb(128, 115, 71),0 3px 6px rgb(249, 249, 249);
+}
+
+@media screen and (max-width: 900px) {
+    .table-responsive{
+        max-width: 100%;
+        min-width: 100%;
+    }
+
+    .table-container{
+        width: 100%;
+        padding: 10px;
+    }
+}
